@@ -1,3 +1,3 @@
-# demo-javascript-function
+# Demo Javascript Function
 
 This repo's for JavaScript Function Exercise
