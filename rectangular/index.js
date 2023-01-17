@@ -1,6 +1,10 @@
 // Input value from user
-const width = prompt(`Input width value of the rectangular (in meter): `);
-const length = prompt(`Input length value of the rectangular (in meter): `);
+const width = parseInt(
+  prompt(`Input width value of the rectangular (in meter): `)
+);
+const length = parseInt(
+  prompt(`Input length value of the rectangular (in meter): `)
+);
 
 // (Area) A = w * l
 function areaRectangular() {
@@ -8,7 +12,7 @@ function areaRectangular() {
   return result;
 }
 
-// (Peimeter) P = (w + l) * 2
+// (Perimeter) P = (w + l) * 2
 function perimeterRectangular() {
   result = (width + length) * 2;
   return result;
@@ -16,31 +20,45 @@ function perimeterRectangular() {
 
 // Call function
 const areaResult = areaRectangular();
-const perimeterResult = perimeterRectangle();
+const perimeterResult = perimeterRectangular();
 
+// Array
 const dataUnits = [
-  { name: "kilometer", rate: 1 / 1000 },
-  { name: "centimeter", rate: 100 },
-  { name: "milimeter", rate: 1000 },
+  { name: "Km", rate: 1 / 1000 },
+  { name: "Cm", rate: 100 },
+  { name: "Mm", rate: 1000 },
 ];
 
-const dataConvertedUnits = [];
+const areaDataConverted = [];
+const perimeterDataConverted = [];
 
 // Loopings
-for (let index = 0; index < array.length; index++) {
-  const convert = dataUnits[index];
-  const converted = {
-    name: `${convert.name}`,
-    areaValue: areaResult * convert.rate,
-    perimeterValue: perimeterResult * convert.rate,
+for (let index = 0; index < dataUnits.length; index++) {
+  const areaConvert = dataUnits[index];
+  const areaConverted = {
+    name: `${areaConvert.name}`,
+    areaValue: areaResult * areaConvert.rate,
   };
-  dataConvertedUnits[index] = converted;
+  areaDataConverted[index] = areaConverted;
+}
+
+for (let index = 0; index < dataUnits.length; index++) {
+  const perimeterConvert = dataUnits[index];
+  const perimeterConverted = {
+    name: `${perimeterConvert.name}`,
+    perimeterValue: perimeterResult * perimeterConvert.rate,
+  };
+  perimeterDataConverted[index] = perimeterConverted;
 }
 
 // Display the result
-for (let index = 0; index < array.length; index++) {
-  const dataConverted = dataConvertedUnits[index];
+for (let index = 0; index < areaDataConverted.length; index++) {
+  const areaDataValue = areaDataConverted[index];
+  const perimeterDataValue = perimeterDataConverted[index];
   console.log(
-    `${areaResult} M & ${perimeterResult} equal is to ${dataConverted.areaValue} ${dataConverted.name} & ${dataConverted.perimeterValue} ${dataConverted.name} `
+    `${areaResult} m is equal to ${areaDataValue.areaValue} ${areaDataValue.name} `
+  );
+  console.log(
+    `${perimeterResult} m is equal to ${perimeterDataValue.perimeterValue} ${perimeterDataValue.name}`
   );
 }
