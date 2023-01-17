@@ -1,10 +1,22 @@
-const sideValue = parseInt(prompt("Enter side value of rectangle: "));
+// take input from the user
+let side = prompt("Input side value: ");
 
-// calculate area of rectangle
+// A = s * s
+function areaRectangle() {
+  area = side * side;
+  return area;
+}
 
-const perimeterValue = 4 * sideValue;
-const areaValue = sideValue * sideValue;
+// P = s * 4
+function perimeterRectangle() {
+  perimeter = side * 4;
+  return perimeter;
+}
 
-console.log(`The area of the rectangle is ${areaValue}`);
+// calling function
+let areaResult = areaRectangle(side);
+let perimeterResult = perimeterRectangle(side);
 
-console.log(`The perimeter of the rectangle is ${perimeterValue}`);
+// display the result
+console.log("The area value of the rectangle is " + areaResult);
+console.log("The perimeter value of the rectangle is " + perimeterResult);
