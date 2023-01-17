@@ -14,8 +14,8 @@ function perimeterRectangle() {
 }
 
 // calling function
-let areaResult = areaRectangle(side);
-let perimeterResult = perimeterRectangle(side);
+let areaResult = areaRectangle();
+let perimeterResult = perimeterRectangle();
 
 // display the result
 console.log("The area value of the rectangle is " + areaResult);

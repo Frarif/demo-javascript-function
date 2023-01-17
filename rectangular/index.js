@@ -1,11 +1,46 @@
-const breadthValue = parseInt(prompt("Enter breadth value: "));
-const lengthValue = parseInt(prompt("Enter length value: "));
+// Input value from user
+const width = prompt(`Input width value of the rectangular (in meter): `);
+const length = prompt(`Input length value of the rectangular (in meter): `);
 
-// calculate area
+// (Area) A = w * l
+function areaRectangular() {
+  result = width * length;
+  return result;
+}
 
-const perimeterValue = 2 * (lengthValue + breadthValue);
-const areaValue = lengthValue * breadthValue;
+// (Peimeter) P = (w + l) * 2
+function perimeterRectangular() {
+  result = (width + length) * 2;
+  return result;
+}
 
-console.log(`The perimeter value of rectangular is ${perimeterValue}`);
+// Call function
+const areaResult = areaRectangular();
+const perimeterResult = perimeterRectangle();
 
-console.log(`The area value of rectangular is ${areaValue}`);
+const dataUnits = [
+  { name: "kilometer", rate: 1 / 1000 },
+  { name: "centimeter", rate: 100 },
+  { name: "milimeter", rate: 1000 },
+];
+
+const dataConvertedUnits = [];
+
+// Loopings
+for (let index = 0; index < array.length; index++) {
+  const convert = dataUnits[index];
+  const converted = {
+    name: `${convert.name}`,
+    areaValue: areaResult * convert.rate,
+    perimeterValue: perimeterResult * convert.rate,
+  };
+  dataConvertedUnits[index] = converted;
+}
+
+// Display the result
+for (let index = 0; index < array.length; index++) {
+  const dataConverted = dataConvertedUnits[index];
+  console.log(
+    `${areaResult} M & ${perimeterResult} equal is to ${dataConverted.areaValue} ${dataConverted.name} & ${dataConverted.perimeterValue} ${dataConverted.name} `
+  );
+}

@@ -1,14 +1,23 @@
-const baseValue = parseInt(prompt("Enter base value of triangle: "));
-const heightValue = parseInt(prompt("Enter height value of triangle: "));
+// Input from user
+let base = prompt(`Input base value of the triangle: `);
+let height = prompt(`Input height value of the triangle: `);
 
-// calculate perimeter
-// P = a + b + c
-const perimeterValue = baseValue * 3;
+// A = (b * h) / 2
+function areaTriangle() {
+  area = (base * height) / 2;
+  return area;
+}
 
-// calculate area
-// A = (h * b) / 2
-const areaValue = (baseValue * heightValue) / 2;
+// P = b * 3
+function perimeterTriangle() {
+  perimeter = base * 3;
+  return perimeter;
+}
 
-console.log(`The area value of the triangle is ${areaValue}`);
+// Calling function
+let areaResult = areaTriangle();
+let perimeterResult = perimeterTriangle();
 
-console.log(`The perimeter value of the triangle is ${perimeterValue}`);
+// Display result
+console.log("The area value of the rectangle is " + areaResult);
+console.log("The perimeter value of the rectangle is " + perimeterResult);
