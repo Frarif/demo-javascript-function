@@ -1,3 +1,12 @@
+const inputValue = confirm(`Are you sure want to input value ?`);
+
+if (inputValue) {
+  alert(`Please input the value`);
+} else {
+  alert(`OK, see you soon.`);
+  areaTriangle.remove();
+}
+
 // Input value from user
 const width = parseInt(prompt(`Input width value of the rectangular (m): `));
 const length = parseInt(prompt(`Input length value of the rectangular (m): `));
