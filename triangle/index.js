@@ -1,4 +1,4 @@
-const inputValue = confirm(`Are you sure wanna input value ?`);
+const inputValue = confirm(`Are you sure want to input value ?`);
 
 if (inputValue) {
   alert(`Please input the value`);
