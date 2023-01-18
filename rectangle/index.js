@@ -1,22 +1,16 @@
-// take input from the user
-let side = prompt("Input side value: ");
-
 // A = s * s
-function areaRectangle() {
-  area = side * side;
-  return area;
+function areaRectangle(side) {
+  if (side) {
+    const area = side * side;
+    const formattedResult = `${side} × ${side} = ${area} m²`;
+    window.alert(formattedResult);
+  } else {
+    alert(`Enter side value`);
+  }
 }
 
-// P = s * 4
-function perimeterRectangle() {
-  perimeter = side * 4;
-  return perimeter;
+function runCalculation() {
+  const side = parseInt(prompt("Input side value (m): "));
+  areaRectangle(side);
 }
-
-// calling function
-let areaResult = areaRectangle();
-let perimeterResult = perimeterRectangle();
-
-// display the result
-console.log("The area value of the rectangle is " + areaResult);
-console.log("The perimeter value of the rectangle is " + perimeterResult);
+runCalculation();
