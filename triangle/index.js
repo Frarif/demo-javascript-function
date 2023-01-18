@@ -3,7 +3,8 @@ const inputValue = confirm(`Are you sure wanna input value ?`);
 if (inputValue) {
   alert(`Please input the value`);
 } else {
-  alert(`OK, See you soon.`);
+  alert(`OK, see you soon.`);
+  areaTriangle.remove();
 }
 
 // Input from user
