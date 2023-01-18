@@ -1,7 +1,16 @@
+const inputValue = confirm(`Are you sure want to input value ?`);
+
+if (inputValue) {
+  alert(`Please input the value`);
+} else {
+  alert(`OK, see you soon.`);
+  areaTrapezoid.remove();
+}
+
 // Input value from user
-const base1Value = parseInt(prompt("Enter base1 value of trapezoid: "));
-const base2Value = parseInt(prompt("Enter base2 value of trapezoid: "));
-const heightValue = parseInt(prompt("Enter height value of trapezoid: "));
+const base1Value = parseInt(prompt("Enter base1 value of trapezoid (m): "));
+const base2Value = parseInt(prompt("Enter base2 value of trapezoid (m): "));
+const heightValue = parseInt(prompt("Enter height value of trapezoid (m): "));
 
 // A = (b1 + b2) * h /2
 function areaTrapezoid() {

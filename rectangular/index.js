@@ -4,7 +4,7 @@ if (inputValue) {
   alert(`Please input the value`);
 } else {
   alert(`OK, see you soon.`);
-  areaTriangle.remove();
+  areaRectangular.remove();
 }
 
 // Input value from user
