@@ -1,10 +1,6 @@
 // Input value from user
-const width = parseInt(
-  prompt(`Input width value of the rectangular (in meter): `)
-);
-const length = parseInt(
-  prompt(`Input length value of the rectangular (in meter): `)
-);
+const width = parseInt(prompt(`Input width value of the rectangular (m): `));
+const length = parseInt(prompt(`Input length value of the rectangular (m): `));
 
 // (Area) A = w * l
 function areaRectangular() {
