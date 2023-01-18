@@ -1,11 +1,11 @@
-const inputValue = confirm(`Are you sure wanna input value ?`);
+// const inputValue = confirm(`Are you sure wanna input value ?`);
 
-if (inputValue) {
-  alert(`Please input the value`);
-} else {
-  alert(`OK, see you soon.`);
-  areaTriangle.remove();
-}
+// if (inputValue) {
+//   alert(`Please input the value`);
+// } else {
+//   alert(`OK, see you soon.`);
+//   areaTriangle.remove();
+// }
 
 // Input from user
 const base = parseInt(prompt(`Enter base value of the triangle (m): `));
@@ -63,7 +63,7 @@ for (let index = 0; index < perimeterDataUnits.length; index++) {
   const perimeterConvert = perimeterDataUnits[index];
   const perimeterConverted = {
     name: `${perimeterConvert.name}`,
-    value: perimeterResult * perimeterConvert.multiplied,
+    perimeterValue: perimeterResult * perimeterConvert.multiplied,
   };
   perimeterDataConverted[index] = perimeterConverted;
 }
