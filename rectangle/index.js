@@ -5,7 +5,7 @@ function calculateRectangleArea(side) {
 }
 
 // P = s * 4
-function calclateRectanglePerimeter(side) {
+function calculateRectanglePerimeter(side) {
   const perimeter = side * 4;
   return perimeter;
 }
@@ -17,11 +17,11 @@ function runApp() {
 
   if (rectangleSidePrompt) {
     const areaResult = calculateRectangleArea(rectangleSidePrompt);
-    const perimeterResult = calclateRectanglePerimeter(rectangleSidePrompt);
+    const perimeterResult = calculateRectanglePerimeter(rectangleSidePrompt);
 
     console.log(`${areaResult} m² & ${perimeterResult} m`);
   } else {
-    console.log(`Please enter side value correctly`);
+    window.alert(`Please enter side value correctly`);
   }
 }
 
