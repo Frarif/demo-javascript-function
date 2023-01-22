@@ -46,10 +46,11 @@ function runApp() {
     }
 
     // Display the result
+    console.log(`The Area`);
     for (let index = 0; index < areaDataConverted.length; index++) {
       const areaDataValue = areaDataConverted[index];
       console.log(
-        `The area ${areaResult} m² is equal to ${areaDataValue.areaValue} ${areaDataValue.name} `
+        `${areaResult} m² = ${areaDataValue.areaValue} ${areaDataValue.name} `
       );
     }
   } else {

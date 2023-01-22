@@ -67,6 +67,7 @@ function runApp() {
     }
 
     // Display the result
+
     console.log(`The Area`);
     for (let index = 0; index < dataAreaConverted.length; index++) {
       const areaDataValue = dataAreaConverted[index];

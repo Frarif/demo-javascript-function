@@ -71,17 +71,23 @@ function runApp() {
     }
 
     // Display the result
+    console.log(`The Area`);
     for (let index = 0; index < areaDataConverted.length; index++) {
       const areaDataValue = areaDataConverted[index];
+      console.log(
+        `${areaResult} m² = ${areaDataValue.areaValue} ${areaDataValue.name} `
+      );
+    }
+
+    console.log(`The Perimeter`);
+    for (let index = 0; index < perimeterDataConverted.length; index++) {
       const perimeterDataValue = perimeterDataConverted[index];
       console.log(
-        `The area ${areaResult} m² is equal to ${areaDataValue.areaValue} ${areaDataValue.name} `
-      );
-      console.log(
-        `The perimeter ${perimeterResult} m is equal to ${perimeterDataValue.perimeterValue} ${perimeterDataValue.name}`
+        `${perimeterResult} m = ${perimeterDataValue.perimeterValue} ${perimeterDataValue.name}`
       );
     }
   } else {
+    window.alert(`Please enter width and length`);
     console.log(`Please enter width and length properly`);
   }
 }
