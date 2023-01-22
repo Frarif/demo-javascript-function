@@ -67,17 +67,19 @@ function runApp() {
     }
 
     // Display the result
-    console.log(`The area is ${areaResult} m²`);
+    console.log(`The Area`);
     for (let index = 0; index < dataAreaConverted.length; index++) {
       const areaDataValue = dataAreaConverted[index];
-      console.log(`Equal to ${areaDataValue.areaValue} ${areaDataValue.name} `);
+      console.log(
+        `${areaResult} m² = ${areaDataValue.areaValue} ${areaDataValue.name} `
+      );
     }
 
-    console.log(`The perimter is ${perimeterResult} m`);
+    console.log(`The Perimeter`);
     for (let index = 0; index < dataPerimeterConverted.length; index++) {
       const perimeterDataValue = dataPerimeterConverted[index];
       console.log(
-        `Equal to ${perimeterDataValue.perimeterValue} ${perimeterDataValue.name}`
+        `${perimeterResult} m = ${perimeterDataValue.perimeterValue} ${perimeterDataValue.name}`
       );
     }
   } else {
