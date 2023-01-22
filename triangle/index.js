@@ -12,10 +12,10 @@ function calculateTrianglePerimeter(base) {
 
 function runApp() {
   // Input from user
-  const triangleBasePrompt = parseInt(
+  const triangleBasePrompt = Number(
     prompt(`Enter base value of the triangle (m): `)
   );
-  const triangleHeightPrompt = parseInt(
+  const triangleHeightPrompt = Number(
     prompt(`Enter height value of the triangle (m): `)
   );
 
@@ -67,17 +67,21 @@ function runApp() {
     }
 
     // Display the result
+    console.log(`The area is ${areaResult} m²`);
     for (let index = 0; index < dataAreaConverted.length; index++) {
       const areaDataValue = dataAreaConverted[index];
+      console.log(`Equal to ${areaDataValue.areaValue} ${areaDataValue.name} `);
+    }
+
+    console.log(`The perimter is ${perimeterResult} m`);
+    for (let index = 0; index < dataPerimeterConverted.length; index++) {
       const perimeterDataValue = dataPerimeterConverted[index];
       console.log(
-        `The area ${areaResult} m² is equal to ${areaDataValue.areaValue} ${areaDataValue.name} `
-      );
-      console.log(
-        `The perimeter ${perimeterResult} m is equal to ${perimeterDataValue.perimeterValue} ${perimeterDataValue.name}`
+        `Equal to ${perimeterDataValue.perimeterValue} ${perimeterDataValue.name}`
       );
     }
   } else {
+    window.alert(`Please enter base and height`);
     console.log(`Please enter base and height properly!`);
   }
 }

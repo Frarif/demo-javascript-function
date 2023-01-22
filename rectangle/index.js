@@ -11,7 +11,7 @@ function calculateRectanglePerimeter(side) {
 }
 
 function runApp() {
-  const rectangleSidePrompt = parseInt(
+  const rectangleSidePrompt = Number(
     prompt(`Enter side value of the rectangle (m): `)
   );
 

@@ -1,5 +1,5 @@
 const piValue = 3.14;
-const radiusValue = parseInt(prompt("Enter radius value of circle: "));
+const radiusValue = Number(prompt("Enter radius value of circle: "));
 
 // calculate perimeter
 const perimeterValue = 2 * piValue * radiusValue;
