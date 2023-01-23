@@ -50,7 +50,9 @@ function runApp() {
     for (let index = 0; index < areaDataConverted.length; index++) {
       const areaDataValue = areaDataConverted[index];
       console.log(
-        `${areaResult} m² = ${areaDataValue.areaValue} ${areaDataValue.name} `
+        `${areaResult.toFixed(1)} m² = ${areaDataValue.areaValue.toFixed(1)} ${
+          areaDataValue.name
+        } `
       );
     }
   } else {

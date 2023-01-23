@@ -61,7 +61,9 @@ function runApp() {
     for (let index = 0; index < dataAreaConverted.length; index++) {
       const areaDataValue = dataAreaConverted[index];
       console.log(
-        `${areaResult} m² = ${areaDataValue.areaValue} ${areaDataValue.name} `
+        `${areaResult.toFixed(2)} m² = ${areaDataValue.areaValue.toFixed(2)} ${
+          areaDataValue.name
+        } `
       );
     }
 
@@ -69,7 +71,11 @@ function runApp() {
     for (let index = 0; index < dataPerimeterConverted.length; index++) {
       const perimeterDataValue = dataPerimeterConverted[index];
       console.log(
-        `${perimeterResult} m = ${perimeterDataValue.perimeterValue} ${perimeterDataValue.name}`
+        `${perimeterResult.toFixed(
+          2
+        )} m = ${perimeterDataValue.perimeterValue.toFixed(2)} ${
+          perimeterDataValue.name
+        }`
       );
     }
   } else {
